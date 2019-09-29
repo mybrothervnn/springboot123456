@@ -1,0 +1,29 @@
+myclass:
+  id: TiengNhatCongViec
+  list:
+      - { id: 2, jp: 勢力, vn: thế lực ., hanviet: THẾ LỰC, hiragana: せいりょく }  
+      - { id: 3, jp: 新鮮, vn: tươi; mới, hanviet: TÂN TIÊN, hiragana: しんせん }  
+      - { id: 4, jp: 朝鮮, vn: đại hàn, hanviet: TRIÊU TIÊN, hiragana: ちょうせん }  
+      - { id: 5, jp: 鉄道, vn: Đường sắt, hanviet: THIẾT ĐẠO, hiragana: てつどう }  
+      - { id: 7, jp: 想起, vn: Remembering, hanviet: TƯỞNG KHỞI, hiragana: そうき }  
+      - { id: 8, jp: 想像, vn: Imagination, hanviet: TƯỞNG TƯỢNG, hiragana: そうぞう }  
+      - { id: 9, jp: 想到, vn: Nghĩ về, hanviet: TƯỞNG ĐÁO, hiragana: そうとう }  
+      - { id: 10, jp: 予想, vn: Sự báo trước, hanviet: DƯ TƯỞNG, hiragana: よそう }  
+      - { id: 11, jp: 仮想, vn: Sức tưởng tượng, hanviet: GIẢ TƯỞNG, hiragana: かそう }  
+      - { id: 14, jp: 参, vn: tham gia, hanviet: THAM, hiragana:  }  
+      - { id: 15, jp: 乗, vn: lên xe, hanviet: THỪA, hiragana:  }  
+      - { id: 16, jp: 乾, vn: khô, hanviet: CAN, hiragana:  }  
+      - { id: 17, jp: 事, vn: sự việc, hanviet: SỰ, hiragana:  }  
+      - { id: 18, jp: 丁, vn: can thứ 4, hanviet: ĐINH, hiragana:  }  
+      - { id: 19, jp: 主, vn: người chủ, hanviet: CHỦ, hiragana:  }  
+      - { id: 20, jp: 交, vn: giao nhau, hanviet: GIAO, hiragana:  }  
+      - { id: 21, jp: 京, vn: kinh đô, hanviet: KINH, hiragana:  }  
+      - { id: 22, jp: 人, vn: người, hanviet: NHÂN, hiragana:  }  
+      - { id: 23, jp: 今, vn: bây giờ, hanviet: KIM, hiragana:  }  
+      - { id: 24, jp: 介, vn: giới thiệu, hanviet: GIỚI, hiragana:  }  
+      - { id: 25, jp: 仕, vn: công việc, hanviet: SĨ, hiragana:  }  
+      - { id: 26, jp: 他, vn: khác, hanviet: THA, hiragana:  }  
+      - { id: 27, jp: 付, vn: giao phó , gắn vào, hanviet: PHÓ, hiragana:  }  
+      - { id: 28, jp: 代, vn: thời đại, thay thế, hanviet: ĐẠI, hiragana:  }  
+
+    

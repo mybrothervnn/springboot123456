@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Template</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <!-- Bootstrap Core CSS -->
+    <link th:href="@{/bower_components/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link th:href="@{/bower_components/metisMenu/dist/metisMenu.min.css}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link th:href="@{/dist/css/sb-admin-2.css}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link th:href="@{/bower_components/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css">
+
+    <!-- DataTables CSS -->
+    <link th:href="@{/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css}" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link th:href="@{/bower_components/datatables-responsive/css/dataTables.responsive.css}" rel="stylesheet">
+  
+  <!--css-->
+  <!-- <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+  <link th:href="@{/css/main.css}" rel="stylesheet" /> -->
+  
+  <!--js-->
+  <script th:src="@{/js/bootstrap.js}"></script>
+  <link rel="stylesheet" type="text/css" th:href="@{/main.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/secondary.css}"/>
+     
+    <script type="text/javascript" th:src="@{/main.js}"></script>
+    <script type="text/javascript" th:src="@{/secondary.js}"></script>
+</head>
+<body>
+ <!-- Script in body -->
+    <script type="text/javascript" th:src="@{/script-in-body.js}"></script>
+     <ul th:fragment="frag_search">
+	     <form th:action="@{/hoc}" method="get">	
+			<input type="text" value ="" name="kanji"/> <input type="submit"/>		
+			<a th:href="@{/}" class = "btn btn-warning">Home</a>
+		</form>
+	        
+        
+    </ul>
+    
+    <ul th:fragment="frag_kanji">
+    	<li>
+			<span th:text="*{kanji.id}"></span> <br>
+			<b><span th:text="*{kanji.jp}"></span> </b><br>
+			<span th:text="*{kanji.VN}"></span> <br>
+			<span th:text="*{kanji.HAN_VIET}"></span>
+			<span th:text="*{kanji.HIRAGANA}"></span>
+		</li>
+	</ul>
+	
+	<ul th:fragment="frag_kanji_relationshift">
+		<h3 align="center">Từ vựng ngẫu nhiên</h3>
+		<h1 align="center" >
+			
+			<!--  <span th:text="${listKanjiRel[__${stt}__].id}"></span>-->
+			<a th:href="@{/hoc?kanji=__*{listKanji.JP}__}"><span th:text="*{listKanji.JP}"></span></a>
+		</h1>
+		
+		<h3 align="center">	
+			<span style="color: green" th:text="*{listKanji.HIRAGANA}"></span><br/><br/>
+			<span th:text="*{listKanji.HAN_VIET}"></span>
+			<span th:text="*{listKanji.VN}"></span>
+		</h3>
+	</ul>
+	
+	<!-- frag_hinhanh -->
+  <div th:fragment="frag_hinhanh">
+  
+  	<svg height="250px" version="1.1" width="250px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.6px; top: -0.6px;" viewBox="0 0 125 125" preserveAspectRatio="xMinYMin" class="dmak-svg"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#cccccc" d="M62.5,0L62.5,125" stroke-width="0.5" stroke-dasharray="4,1.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#cccccc" d="M0,62.5L125,62.5" stroke-width="0.5" stroke-dasharray="4,1.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#4cbf69" d="M51.75,10.25C51.86,11.25,51.69,12.92,51.04,14.27C46.57,23.5,33.980000000000004,40.25,12.25,52.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linecap: round; stroke-linejoin: round; transition: stroke 400ms ease 0s; stroke-dasharray: 59.4798, 59.4798; stroke-dashoffset: 0;"></path><text x="43.50" y="14.50" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="8px" stroke="none" fill="#4cbf69" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 8px;"><tspan dy="2.796875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1</tspan></text><path fill="none" stroke="#4cbf9c" d="M53.5,15C60.62,22,76.39,35.46,84.1,41.65C86.91999999999999,43.91,89.75,45.87,93.25,47.37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linecap: round; stroke-linejoin: round; transition: stroke 400ms ease 0s; stroke-dasharray: 51.4147, 51.4147; stroke-dashoffset: 0;"></path><text x="61.50" y="17.50" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="8px" stroke="none" fill="#4cbf9c" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 8px;"><tspan dy="2.796875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2</tspan></text><path fill="none" stroke="#4caebf" d="M38.25,40.64C40.01,41.36,42.09,41,43.9,40.78C49.3,40.120000000000005,56.98,39.02,62.379999999999995,38.54C64.25999999999999,38.37,65.92,38.31,67.75,38.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linecap: round; stroke-linejoin: round; transition: stroke 400ms ease 0s; stroke-dasharray: 29.7344, 29.7344; stroke-dashoffset: 0;"></path><text x="42.50" y="37.50" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="8px" stroke="none" fill="#4caebf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 8px;"><tspan dy="2.796875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">3</tspan></text><path fill="none" stroke="#4c7abf" d="M21.2,54.29C22.21,55.3,22.79,56.55,22.869999999999997,57.72C23.769999999999996,61.6,24.639999999999997,67.84,25.269999999999996,73.61C25.429999999999996,75.04,25.569999999999997,76.4,25.689999999999998,77.65" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linecap: round; stroke-linejoin: round; transition: stroke 400ms ease 0s; stroke-dasharray: 24.0355, 24.0355; stroke-dashoffset: 0;"></path><text x="15.75" y="64.63" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="8px" stroke="none" fill="#4c7abf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 8px;"><tspan dy="2.8018749999999955" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">4</tspan></text><path fill="none" stroke="#524cbf" d="M23.92,56.51C34.75,54.75,39.34,54.33,44.2,53.86C45.980000000000004,53.69,46.99,55.019999999999996,46.690000000000005,56.14C45.46000000000001,60.77,45.02,65.87,43.21000000000001,72.27" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linecap: round; stroke-linejoin: round; transition: stroke 400ms ease 0s; stroke-dasharray: 40.9335, 40.9335; stroke-dashoffset: 0;"></path><text x="26.50" y="52.63" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="8px" stroke="none" fill="#524cbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 8px;"><tspan dy="2.8018750000000026" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">5</tspan></text><path fill="none" stroke="#854cbf" d="M26.02,75.17C30.79,74.73,35.33,74,41.269999999999996,73.28C42.44,73.14,43.66,73,44.949999999999996,72.86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linecap: round; stroke-linejoin: round; transition: stroke 400ms ease 0s; stroke-dasharray: 19.0715, 19.0715; stroke-dashoffset: 0;"></path><text x="29.50" y="70.63" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="8px" stroke="none" fill="#854cbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 8px;"><tspan dy="2.8018749999999955" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">6</tspan></text><path fill="none" stroke="#b94cbf" d="M54,54C54.61,54.15,57,55,58.21,54.87C61.5,54.5,76.2,50.849999999999994,77.72,50.699999999999996C79.24,50.55,82,50.41,81.67,53.589999999999996C81.24,57.76,78.99,70.50999999999999,75.67,77.42999999999999C73.78,81.36999999999999,72.49,80.88,69.44,77.88999999999999" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linecap: round; stroke-linejoin: round; transition: stroke 400ms ease 0s; stroke-dasharray: 63.3223, 63.3223; stroke-dashoffset: 0;"></path><text x="58.50" y="51.47" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="8px" stroke="none" fill="#b94cbf" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 8px;"><tspan dy="2.798124999999999" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">7</tspan></text><path fill="none" stroke="#bf4c91" d="M57.38,55.38C58.25,56.25,59.18,57.38,59.18,58.88C59.18,66.24000000000001,59.14,83.41,59.08,93.01C59.059999999999995,96.31,59.03,98.72,59,99.52000000000001" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-linecap: round; stroke-linejoin: round; transition: stroke 400ms ease 0s; stroke-dasharray: 44.687, 44.687; stroke-dashoffset: 0;"></path><text x="51.75" y="66.13" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="8px" stroke="none" fill="#bf4c91" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 8px;"><tspan dy="2.8018749999999955" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">8</tspan></text></svg>
+  
+  </div>
+  <!-- frag_gridkanji -->
+  <div th:fragment="frag_gridkanji">
+  	<div id="kanji-detail-result" class="widget-container table-kanji-list ng-scope" ng-if="type == 'kanji' &amp;&amp; list != null">
+        <!-- ngRepeat: item in list track by $index --><div class="kanji-jlpt-char ng-scope" ng-repeat="item in list track by $index">
+            <a class="kanji-link japanese-char" ng-click="showKanji(item.value.kanji, $event)" ng-href="/#!/search?type=k&amp;query=右" href="/#!/search?type=k&amp;query=右">
+                <div class="jlpt-kanji-kanji ng-binding">右</div> 
+                <!-- ngIf: showhanViet --><div class="jlpt-kanji-mean ng-binding ng-scope" ng-if="showhanViet">HỮU</div><!-- end ngIf: showhanViet -->
+            </a>
+        </div><!-- end ngRepeat: item in list track by $index --><div class="kanji-jlpt-char ng-scope" ng-repeat="item in list track by $index">
+            <a class="kanji-link japanese-char" ng-click="showKanji(item.value.kanji, $event)" ng-href="/#!/search?type=k&amp;query=雨" href="/#!/search?type=k&amp;query=雨">
+                <div class="jlpt-kanji-kanji ng-binding">雨</div> 
+                <!-- ngIf: showhanViet --><div class="jlpt-kanji-mean ng-binding ng-scope" ng-if="showhanViet">VŨ</div><!-- end ngIf: showhanViet -->
+            </a>
+        </div><!-- end ngRepeat: item in list track by $index --><div class="kanji-jlpt-char ng-scope" ng-repeat="item in list track by $index">
+            <a class="kanji-link japanese-char" ng-click="showKanji(item.value.kanji, $event)" ng-href="/#!/search?type=k&amp;query=円" href="/#!/search?type=k&amp;query=円">
+                <div class="jlpt-kanji-kanji ng-binding">円</div> 
+                <!-- ngIf: showhanViet --><div class="jlpt-kanji-mean ng-binding ng-scope" ng-if="showhanViet">VIÊN</div><!-- end ngIf: showhanViet -->
+            </a>
+        </div><!-- end ngRepeat: item in list track by $index --><div class="kanji-jlpt-char ng-scope" ng-repeat="item in list track by $index">
+            <a class="kanji-link japanese-char" ng-click="showKanji(item.value.kanji, $event)" ng-href="/#!/search?type=k&amp;query=下" href="/#!/search?type=k&amp;query=下">
+                <div class="jlpt-kanji-kanji ng-binding">下</div> 
+                <!-- ngIf: showhanViet --><div class="jlpt-kanji-mean ng-binding ng-scope" ng-if="showhanViet">HẠ</div><!-- end ngIf: showhanViet -->
+            </a>
+        </div><!-- end ngRepeat: item in list track by $index --><div class="kanji-jlpt-char ng-scope" ng-repeat="item in list track by $index">
+            <a class="kanji-link japanese-char" ng-click="showKanji(item.value.kanji, $event)" ng-href="/#!/search?type=k&amp;query=何" href="/#!/search?type=k&amp;query=何">
+                <div class="jlpt-kanji-kanji ng-binding">何</div> 
+                <!-- ngIf: showhanViet --><div class="jlpt-kanji-mean ng-binding ng-scope" ng-if="showhanViet">HÀ</div><!-- end ngIf: showhanViet -->
+            </a>
+        </div>
+        
+    </div>
+  </div>
+	
+	<footer class="container-fluid text-center text-md-left" th:fragment="copyright" >
+	  MyKanji_Học Kanji!
+	</footer>
+    
+    
+	
+</body>
+
+</html>

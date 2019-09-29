@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thanh Kanji List</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="refresh" content="5">
+
+  <!-- Bootstrap Core CSS -->
+    <link th:href="@{/bower_components/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link th:href="@{/bower_components/metisMenu/dist/metisMenu.min.css}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link th:href="@{/dist/css/sb-admin-2.css}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link th:href="@{/bower_components/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css">
+
+    <!-- DataTables CSS -->
+    <link th:href="@{/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css}" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link th:href="@{/bower_components/datatables-responsive/css/dataTables.responsive.css}" rel="stylesheet">
+  
+  <!--css-->
+  <!-- <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+  <link th:href="@{/css/main.css}" rel="stylesheet" /> -->
+  
+  <!--js-->
+  <script th:src="@{/js/bootstrap.js}"></script>
+</head>
+<body>
+<div class="container">
+	<ul>
+		<h3 align="center">Từ vựng ngẫu nhiên</h3>
+		<h1 align="center" >
+			
+			  <span th:text="${kanji.id}"></span>
+			<!-- <a th:href="@{/hoc?kanji=__${listKanjiRel.JP}__}"><span th:text="*{listKanjiRel.JP}"></span></a> -->
+		</h1>
+		
+		<!-- <h3 align="center">	
+			<span style="color: green" th:text="*{listKanjiRel.HIRAGANA}"></span><br/><br/>
+			<span th:text="*{listKanjiRel.HAN_VIET}"></span>
+			<span th:text="*{listKanjiRel.VN}"></span>
+		</h3> -->
+	</ul>
+</div>
+</body>
+
+</html>
